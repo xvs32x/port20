@@ -1,0 +1,24 @@
+{
+  "npmScope": "port20",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "port20": {
+      "tags": []
+    },
+    "port20-e2e": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interface": {
+      "tags": []
+    }
+  }
+}
