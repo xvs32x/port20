@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+// 1. Your custom variables and variable overwrites.
+$global-link-color: #DA7D02;
+$global-background: #000;
+$global-primary-background: #775EAB;
+$card-default-background: transparentize(#000, .2);
+
+// 2. Import default variables and available mixins.
+@import "~uikit/src/scss/variables-theme.scss";
+@import "~uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() {
+  color: #000;
+}
+
+// 4. Import UIkit.
+@import "~uikit/src/scss/uikit-theme.scss";
+
+// Common
+// Clients styles
+$rmb-primary-color: #77055C;
+$rmb-secondary-color: #DD6B4B;
+.roomberry-gradient-hover {
+  border-top: 1px solid transparentize(#fff, .7);
+  transition: 1s background;
+  background: linear-gradient(90deg, var(--c1, transparentize($global-primary-background, .5)), var(--c2, #DD6B4B) 51%, var(--c1, $rmb-primary-color)) var(--x, 0)/ 200%;
+  &:hover {
+    --x: 100%;
+  }
+}
+$tclub-primary-color: #D7555C;
+$tclub-secondary-color: #EEE9E2;
+.trauma-club-gradient-hover {
+  background: linear-gradient(90deg, var(--c1, transparentize($global-primary-background, .5)), var(--c2, $tclub-primary-color) 51%, var(--c1, $tclub-secondary-color)) var(--x, 0)/ 200%;
+  &:hover {
+    --x: 100%;
+  }
+}
+$sc-primary-color: #9E9E9E;
+$sc-secondary-color: #64DD17;
+.sc-gradient-hover {
+  background: linear-gradient(90deg, var(--c1, transparentize($global-primary-background, .5)), var(--c2, $sc-secondary-color) 51%, var(--c1, $sc-primary-color)) var(--x, 0)/ 200%;
+  &:hover {
+    --x: 100%;
+  }
+}
+.ns-gradient-hover {
+  background: linear-gradient(90deg, var(--c1, transparentize($global-primary-background, .5)), var(--c2, #00BFA5) 51%, var(--c1, $global-primary-background)) var(--x, 0)/ 200%;
+  &:hover {
+    --x: 100%;
+  }
+}
+$ws-primary-color: #F9A825;
+$ws-secondary-color: #CCE6C3;
+.ws-gradient-hover {
+  background: linear-gradient(90deg, var(--c1, transparentize($global-primary-background, .5)), var(--c2, $ws-secondary-color) 51%, var(--c1, $ws-primary-color)) var(--x, 0)/ 200%;
+  &:hover {
+    --x: 100%;
+  }
+}
+
+.client-card {
+  border-top: 1px solid transparentize(#fff, .7);
+  transition: 1s background, .5s box-shadow;
+}
+
+.action-card {
+  &:hover {
+    box-shadow: 0 0 40px $global-primary-background;
+  }
+}

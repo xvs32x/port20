@@ -10,7 +10,9 @@
       "prefix": "port20",
       "schematics": {
         "@nrwl/schematics:component": {
-          "style": "scss"
+          "style": "scss",
+          "inlineTemplate": true,
+          "inlineStyle": true
         }
       },
       "architect": {
@@ -24,7 +26,10 @@
             "tsConfig": "apps/port20/tsconfig.app.json",
             "assets": ["apps/port20/src/favicon.ico", "apps/port20/src/assets"],
             "styles": ["apps/port20/src/styles.scss"],
-            "scripts": [],
+            "scripts": [
+              "node_modules/uikit/dist/js/uikit.min.js",
+              "node_modules/uikit/dist/js/uikit-icons.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
