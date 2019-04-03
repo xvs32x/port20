@@ -4,6 +4,7 @@ $global-link-color: #DA7D02;
 $global-background: #000;
 $global-primary-background: #775EAB;
 $card-default-background: transparentize(#000, .2);
+$navbar-background: transparentize(#775EAB, .7);
 
 // 2. Import default variables and available mixins.
 @import "~uikit/src/scss/variables-theme.scss";
@@ -66,7 +67,13 @@ $ws-secondary-color: #CCE6C3;
 }
 
 .action-card {
+  background: linear-gradient(90deg, var(--c1, transparentize($global-primary-background, .5)), var(--c2, transparentize($global-primary-background, .5)) 51%, var(--c1, lighten($global-primary-background, 10%))) var(--x, 0)/ 200%;
   &:hover {
-    box-shadow: 0 0 40px $global-primary-background;
+    --x: 100%;
   }
 }
+
+.pyramid {
+  background: $navbar-background;
+}
+

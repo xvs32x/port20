@@ -5,12 +5,10 @@ import { Client } from '../../interfaces/client';
 @Component({
   selector: 'port20-client-list',
   template: `
-    <div
-      uk-height-viewport="offset-top: true"
+    <div uk-height-viewport="offset-top: true; offset-bottom: 110px"
       class="uk-container uk-container-large uk-flex uk-flex-middle">
-      <div
-        uk-grid
-        class="uk-grid-small uk-grid-match uk-child-width-1-3@s">
+      <div uk-grid
+        class="uk-grid-small uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l">
         <div *ngFor="let client of clients | async; trackBy:trackBy">
           <port20-client-card
             [client]="client"

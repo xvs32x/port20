@@ -8,7 +8,9 @@ import { Component } from "@angular/core";
         <source src="assets/videos/body.mp4" type="video/mp4">
       </video>
       <div>
+        <port20-nav-bar></port20-nav-bar>
         <router-outlet></router-outlet>
+        <port20-footer></port20-footer>
       </div>
     </div>
   `
