@@ -77,3 +77,10 @@ $ws-secondary-color: #CCE6C3;
   background: $navbar-background;
 }
 
+::-webkit-scrollbar { background: lighten(#000, 3); }
+::-webkit-scrollbar-button { background: lighten(#000, 10); }
+::-webkit-scrollbar-track { background: lighten(#000, 20); }
+::-webkit-scrollbar-track-piece { background: lighten(#000, 1); }
+::-webkit-scrollbar-thumb { background: lighten(#000, 20); }
+::-webkit-scrollbar-corner { background: lighten(#000, 10); }
+
